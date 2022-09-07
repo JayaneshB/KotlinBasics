@@ -22,55 +22,17 @@ fun main() {
     println(boxedA === anotherBoxedA)
     println(boxedB === anotherBoxedB)*/
 
-    /*val s="hello World!!!"
+    val s="hello World!!!"
     for ( i in s)
         println(i)
 
 
-    val arr1=arrayOf(1,2,3,4,5)
-    for( i in arr1)
-        print(i)*/
-
-    //Array declaartion using array constructor
-    /*val arr1=Array(10,{i->i*1})
-    for (i in 1..arr1.size-1)
-        println(i)
-
-     */
-    //Array declaration using arrayof() function
-
-    //Implicit type declaration
-    /*
-    val arr1=arrayOf(1,2,3,4,5)
-    for (i in 0..arr1.size-1)
-        print(" "+arr1[i])
-    println()
-    */
-    //Explicit type declaration
-    /*val arr2= arrayOf<Int>(1,2,3,4,5,6,7,8,9)
-    val arr3=arrayOf<String>("Hello","world")
-    for (i in 0..arr2.size-1)
-        print(" "+arr2[i])
-    println()
-    for ( j in 0..arr3.size-1)
-        print(" "+arr3[j])
-    */
-
-    //Accessing and modifying array values
-
-    /*
-    val temp=arr1.get(3)
-    println(" "+temp)
-    arr1.set(1,12)
-    for (i in 0..arr1.size-1)
-        print(" "+arr1[i])
-    */
-
-    /*val str="Hello guys!,This is Jayanesh Balakrishnan"
+    val str="Hello guys!,This is Jayanesh Balakrishnan"
     print(str.subSequence(1,5))
-    */
+    println()
 
-    /* If statement
+    //Control Flows
+    //If statement
     val a=7;
     val b=123;
     val res=if(a>b) {
@@ -80,7 +42,33 @@ fun main() {
         print("smaller")
     }
     print(res)
-    */
+    println()
+
+    //when operator
+
+    val week = 12
+
+    val temp= when (week) {
+        1 -> "Friday"
+        2 -> "Saturday"
+        3 -> "Sunday"
+        else -> "Invalid Input"
+    }
+    println(temp)
+
+    //While Loop
+
+    var i=0
+    while(i<20) {
+        print(" "+i)
+        i++
+    }
+
+
+
+
+
+
 
 
 }
