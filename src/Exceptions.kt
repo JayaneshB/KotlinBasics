@@ -1,16 +1,19 @@
 //Exception handling
 import java.util.Scanner;
 
-fun demo(a:Int,b:Int): Any {
+fun demo (a:Int,b:Int): Int {
     return try {
         a/b
     }
-    catch(e:Exception) {
+    /*catch(e:ArithmeticException) {
         println(e)
+    }*/
+    finally {
+        println()
     }
 }
 
-fun test(password:String){
+fun test(password:String) {
     if(password.length<8)
         throw ArithmeticException("Password is short")
     else
@@ -20,7 +23,7 @@ fun test(password:String){
 fun main() {
     //Arithmetic exception
 
-    /*try {
+    try {
         var num = 10 / 0
     } catch (e: ArithmeticException) {
         println("throws arithmthic expression")
@@ -83,7 +86,7 @@ fun main() {
 
     // Multiple catch block
 
-    val sc = Scanner(System.in)
+    /*val sc = Scanner(System.in)
     try {
         val n = Integer.parseInt(sc.nextLine())
         if (512 % n == 0)
@@ -92,8 +95,8 @@ fun main() {
         println(e)
     } catch (e: NumberFormatException) {
         println(e)
-    }
-     */
+    }*/
+
 
     val a=arrayOf(1,2,3,"Java")
 //    a.add("Python")
