@@ -24,9 +24,9 @@ fun main(args:Array<String>) {
     println(num1)
     println(num2)
 
-    /*val str1=sc.nextLine()
-    test2(str1)
-     */
+//    val str1=sc.nextLine()
+//    test2(str1)
+
 
     //Converting the string to any datatype using the conversion form
 
