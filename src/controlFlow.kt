@@ -52,7 +52,7 @@ fun main(args:Array<String>) {
     //When Expression
 
     val m=2
-    var t=when(m){
+    val t=when(m){
         1->"hi"
         2->"Hello"
         3->"Bye!"
