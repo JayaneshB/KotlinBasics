@@ -71,6 +71,12 @@ fun main(args:Array<String>) {
         print(" "+i)
     println()
 
+    val arr2=arrayOf<String>("Java","C","Kotlin","Python","R","C++")
+    for(i in arr2)
+        print(" "+i)
+    println()
+    println(arr2[3])
+
     // While loop
 
     var i=1
@@ -99,5 +105,4 @@ fun main(args:Array<String>) {
         }
         println("Outside if")
     }
-
 }
