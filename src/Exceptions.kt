@@ -61,8 +61,10 @@ fun main() {
 
     // throw keyword
 
-    test("jayanesh")
-    //    val str=readLine()
+    val sc=Scanner(System.`in`)
+    println("Enter the password")
+    val st=sc.nextLine()
+    test(st)
     println("Excutes after validation")
 
 
@@ -102,4 +104,6 @@ fun main() {
 //    a.add("Python")
     for( i in a)
         print(" "+i)
+
+
 }
