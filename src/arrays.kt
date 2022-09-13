@@ -16,6 +16,8 @@ fun main()
         print(" "+arr1[i])
     println()
 
+
+    var arraynull = arrayOfNulls<Int>(10)
     //Explicit type declaration
     val arr2= arrayOf<Int>(1,2,3,4,5,6,7,8,9)
     val arr3=arrayOf<String>("Hello","world")
@@ -55,7 +57,15 @@ fun main()
     val result= max(23,76)
     println(result)
 
+//    val tries
+//    ran(tries:3)
 
+}
+fun ran(tries: Int) {
+    for (i in 0 until tries) {
+        val t = (1..6).random()
+        println(t)
+    }
 }
 fun sum(a:Int,b:Int): Int=a+b
 

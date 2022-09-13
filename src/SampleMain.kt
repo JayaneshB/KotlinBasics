@@ -19,26 +19,34 @@ fun main() {
     val boxedB: Int? = b
     val anotherBoxedB: Int? = b
 
+
+
     println(boxedA === anotherBoxedA)
     println(boxedB === anotherBoxedB)*/
 
-    val s="hello World!!!"
-    for ( i in s)
+    var string = 12
+    var string2: String? = null
+
+    val string1 = addition(1,3)
+
+    val string3 = if(string1==0) "asd" else "advadasvas"
+
+
+    val s = "hello World!!!"
+    for (i in s)
         println(i)
 
-
-    val str="Hello guys!,This is Jayanesh Balakrishnan"
-    print(str.subSequence(1,5))
+    val str = "Hello guys!,This is Jayanesh Balakrishnan"
+    print(str.subSequence(1, 5))
     println()
 
     //Control Flows
     //If statement
-    val a=7;
-    val b=123;
-    val res=if(a>b) {
+    val a = 7;
+    val b = 123;
+    val res = if (a > b) {
         print("greater")
-    }
-    else {
+    } else {
         print("smaller")
     }
     print(res)
@@ -48,7 +56,7 @@ fun main() {
 
     val week = 12
 
-    val temp= when (week) {
+    val temp = when (week) {
         1 -> "Friday"
         2 -> "Saturday"
         3 -> "Sunday"
@@ -58,9 +66,9 @@ fun main() {
 
     //While Loop
 
-    var i=0
-    while(i<20) {
-        print(" "+i)
+    var i = 0
+    while (i < 20) {
+        print(" " + i)
         i++
     }
 
@@ -68,7 +76,8 @@ fun main() {
 
 
 
+}
 
-
-
+fun addition(a: Int, b: Int): Int {
+    return a + b
 }

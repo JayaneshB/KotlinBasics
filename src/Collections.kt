@@ -17,7 +17,7 @@ fun main(){
 
     val immutableSet=setOf(1,2,3,2,1,4,5,3,"Jay","Ajay","Santhosh","Gayu","Ajay")
     for( i in immutableSet)
-        print(" "+i)
+        print(". "+i)
     println()
     //Map
 
@@ -51,7 +51,6 @@ fun main(){
     println(" "+ls1.sortedBy { it.length })
     println(" "+ls1.reversed())
 
-
     //Set collection
 
     val set=mutableSetOf<Int>(1,2,3)
@@ -77,6 +76,12 @@ fun main(){
     for(i in map)
         print(" "+i)
     println()
+
+    val nm=mapOf("one" to 1,"two" to 2)
+    println(nm+Pair("three", 3))
+    //println(nm.plus("six",6))
+    println(nm+Pair("four",4))
+    println(nm+mapOf("five" to 5,"one" to 11))
 
 
 }
