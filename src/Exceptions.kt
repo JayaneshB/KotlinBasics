@@ -1,16 +1,26 @@
 //Exception handling
 import java.util.Scanner;
+import java.lang.IllegalArgumentException;
 
 fun demo (a:Int,b:Int): Int {
     return try {
         a/b
     }
     /*catch(e:ArithmeticException) {
-        println(e)
+        println(0)
     }*/
     finally {
         println()
     }
+}
+// Custom created exception
+class IllegalVoterException(message:String):Exception(message)
+
+//Using the custom created exception in the below function
+fun vote(name:String,age:Int) {
+    if(age<18)
+        throw IllegalVoterException("Cannot vote because of age")
+    println("$name voted")
 }
 
 fun test(password:String) {
@@ -104,8 +114,25 @@ fun main() {
 //    a.add("Python")
     for( i in a)
         print(" "+i)
+    println()
 
-    //End of file
+    // vote function
+
+    val scanner=Scanner(System.`in`)
+    val str=scanner.nextLine()
+    val age=scanner.nextInt()
+    try{
+        vote(str,age)
+    }
+    catch(e:Exception){
+        e.printStackTrace()
+    }
+    catch(e:IllegalVoterException){
+        e.printStackTrace()
+    }
+    finally{
+        println("Executed Successfully")
+    }
 
 
 }
