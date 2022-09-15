@@ -58,9 +58,18 @@ fun pass(ch:Char='*',length:Int=15):Char{
     }
     return ch
 }
+// Higherorder funtion
+
+fun add(a:Double,b:Double):Double{
+    return a+b
+}
+fun higherOrder(a:Double,b:Double,fn:(Double,Double)->Double):Double {
+    return (fn(a,b))
+
+}
 
 fun main(){
-
+/*
     val sc=Scanner(System.`in`)
     println("Enter the string/word:")
     val str=sc.nextLine()
@@ -114,5 +123,16 @@ fun main(){
 
     println(pass())
     println(pass(length=12))
+*/
+    // Higher order function
+
+    val myres=higherOrder(2.0,3.0,::add)
+    println(myres)
+    println()
+
+    //Lambda Function
+
+
+
 
 }
