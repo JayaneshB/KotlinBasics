@@ -1,5 +1,5 @@
 import java.math.BigInteger
-import java.util.Scanner;
+import java.util.Scanner
 
 
 //Extensive function
@@ -58,7 +58,7 @@ fun pass(ch:Char='*',length:Int=15):Char{
     }
     return ch
 }
-// Higherorder funtion
+// HigherOrder function
 
 fun add(a:Double,b:Double):Double{
     return a+b
@@ -69,12 +69,12 @@ fun higherOrder(a:Double,b:Double,fn:(Double,Double)->Double):Double {
 }
 
 fun main(){
-/*
+
     val sc=Scanner(System.`in`)
     println("Enter the string/word:")
     val str=sc.nextLine()
     val result=str.getAllWords()
-    println("The splitted string will be:")
+    println("The separated string will be:")
     println(result)
     println()
 
@@ -107,9 +107,9 @@ fun main(){
     println()
 
     val numb=5
-    val temp2=fact(num)
+    val temp2=fact(numb)
     println("Fact of the number will be:")
-    println(temp)
+    println(temp2)
     println()
 
     // Default argument Passing function call
@@ -123,16 +123,16 @@ fun main(){
 
     println(pass())
     println(pass(length=12))
-*/
+
     // Higher order function
 
-    val myres=higherOrder(2.0,3.0,::add)
-    println(myres)
+    val myRes=higherOrder(2.0,3.0,::add)
+    println(myRes)
     println()
 
     //Lambda Function
 
-
-
-
 }
+
+
+
