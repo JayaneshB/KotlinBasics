@@ -1,3 +1,12 @@
+fun addition1(a: Int, b: Int): Unit {
+    println("${a + b}")
+}
+
+fun someOperation(a: Int, b: Int, urwish: (Int, Int) -> Unit) {
+    val multiply = a * b
+    urwish(multiply, b)
+}
+
 fun main() {
     val company = { println("GeeksforGeeks") }
     val add: (Int, Int) -> Unit = { a, b ->
@@ -16,12 +25,3 @@ fun main() {
 //    company()
 }
 
-fun addition1(a: Int, b: Int): Unit {
-    println("${a + b}")
-}
-
-
-fun someOperation(a: Int, b: Int, urwish: (Int, Int) -> Unit) {
-    val multiply = a * b
-    urwish(multiply, b)
-}

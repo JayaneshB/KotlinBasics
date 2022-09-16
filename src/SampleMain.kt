@@ -72,8 +72,20 @@ fun main() {
         i++
     }
 
+//string functions
+    var v="         There is a space in front and back of the sentence          "
+    println(v.trim())
+    v="Jayanesh"
+    println(v.get(5))
+    println(v.length)
+    println(v.decapitalize())
 
+    println("Enter the string:")
+    val c=readLine()
+    println("$c")
 
+    val ab=1231234565432123454
+    println(ab::class.java)
 
 
 }
