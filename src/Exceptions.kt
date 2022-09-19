@@ -32,7 +32,7 @@ fun test(password:String) {
 
 fun main() {
     //Arithmetic exception
-
+    /*
     try {
         var num = 10 / 0
     } catch (e: ArithmeticException) {
@@ -134,5 +134,24 @@ fun main() {
         println("Executed Successfully")
     }
 
+    */
 
+    // Qn from udemy
+
+    println("What product to buy?")
+    var r=readLine()
+    println("How many product need to buy?")
+    var s=readLine()
+    val price=9.99
+    try{
+        val amount=s?.toInt()
+        println("$amount for $r will cost : ${amount?.times(price)} ")
+    }
+    catch(e:Exception){
+        println("Cannot read")
+        e.printStackTrace()
+    }
+    finally{
+        println("Executed try catch and finally")
+    }
 }

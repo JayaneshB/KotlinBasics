@@ -83,5 +83,56 @@ fun main(){
     println(nm+Pair("four",4))
     println(nm+mapOf("five" to 5,"one" to 11))
 
+    // Qn from Udemy
+
+    val prime=setOf(2,3,5,7,11,13,17,19,23,29)
+    println(prime.contains(21))
+    println(prime.contains(13))
+    println()
+
+    val drink1= hashSetOf("Coke","Pepsi","Dew","Beer","Orange juice")
+    val drink2= hashSetOf("Coke","Sprite","Dew","ThumpsUp")
+    println("Retained Drinks are:")
+    drink1.retainAll(drink2)
+    println(drink1)
+    println()
+
+    var dressCode= hashSetOf("White","Black","Grey")
+    val myDressCode= hashSetOf("Green","Black","red","blue")
+    println("Retained Dress Code:")
+    dressCode.retainAll(myDressCode)
+    println(dressCode)
+
+    dressCode= hashSetOf("White","Black","Grey")
+    dressCode.add("red")
+    println("Updated Dress Code:")
+    dressCode.retainAll(myDressCode)
+    println(dressCode)
+    println()
+
+    var attendance= hashMapOf(Pair("23 Sept",3456),Pair("24 Sept",12345),Pair("25 Sept",6541))
+    attendance["26 Sept"]=3451
+    val on_25=attendance["25 Sept"]?:0
+    val on_26=attendance["26 Sept"]?:0
+    println(on_26)
+    println(on_25)
+    println(attendance.containsKey("22 Sept"))
+
 
 }
+/*
+Functions in set and hashset:
+    //Hashset
+
+    -->retainAll
+    -->clear
+    -->isEmpty
+
+    //Set
+
+    --> Size
+    --> Contains
+    --> containsAll
+    -->isEmpty
+ */
+

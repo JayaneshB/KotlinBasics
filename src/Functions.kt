@@ -1,5 +1,4 @@
 import java.math.BigInteger
-import java.util.Scanner
 
 
 //Extensive function
@@ -70,6 +69,7 @@ fun higherOrder(a:Double,b:Double,fn:(Double,Double)->Double):Double {
 
 fun main(){
 
+    /*
     val sc=Scanner(System.`in`)
     println("Enter the string/word:")
     val str=sc.nextLine()
@@ -130,9 +130,142 @@ fun main(){
     println(myRes)
     println()
 
-    //Lambda Function
+    */
 
+    //Qn from udemy
+    /*for( i in 1..3) {
+        multiplyNumber()
+    }
+    */
+    /*for( i in 1..3){
+        message()
+    }
+
+     */
+
+    /*
+    val clients= listOf<String>("Jayanesh","Nikita","Sneha","Prabhakaran")
+    sayHello(clients)
+     */
+
+    /*
+    cost("Iphone",14.99)
+    val p= mapOf(Pair("cake",35.65),Pair("Biriyani",25.00))
+    cost(p)
+     */
+
+    // vararg in function parameter
+
+    println("Sum of the given numbers will be: ")
+    println(sum(1,2,3,4,56,7,8,9,8,7,6,5,4,3,2,1))
+    println()
+
+    // Lambda Function
+
+    val myName={name:String->println("Hello $name")}
+
+    val names= arrayListOf("Jayanesh","Nikita","Prabha")
+
+    //val myLambda={name:String->println("Hello there $name !!!!!")}
+    // we can add the lambda function directly into the function call as a argument
+    /* we can also add the array list inside the function call parameter as
+
+            Hello(arrayListOf("Jayanesh","Nikita","Prabha"),{name:String->println("Hello there $name !!!!!")})
+
+     */
+
+    Hello(names,{name:String->println("Hello there $name !!!!!")})
+    println()
+
+    // Qn from udemy
+
+    val number= arrayListOf(1,2,3,4,54,32,7,85,4)
+    println(number)
+    val newNumber=update(number){num->num/10}
+    println(newNumber)
+    println()
+
+    // Qn from udemy
+
+    val clients=arrayListOf("Jayanesh","Hema")
+    val mess= udemy(clients){name->"Hello $name ,how are you?"}
+    println(clients)
+    println(mess)
+    println()
+
+    for(i in 0..clients.size-1){
+        println("Message for ${clients[i]}")
+        println(mess[i])
+        println()
+    }
+}
+fun multiplyNumber(){
+    val input= readLine()?:""
+    val number=input.toInt()
+    println("The result will be :${number*17}")
+}
+fun message(){
+    println("Enter your name")
+    val input=readLine()?:""
+    println("Enter DOB")
+    val input2=readLine()?:""
+    val year=input2.toInt()
+    println("$input is ${2022-year} years old")
+}
+
+fun sayHello(people:Collection<String>){
+    for(i in people){
+        println("Hellooo $i")
+    }
+}
+fun cost(product:String, price: Double?){
+    println("A $product costs ${price?.times(1.2)}")
+}
+fun cost(products: Map<String,Double>){
+    for(i in products.keys){
+        cost(i,products[i])
+    }
+}
+fun sum(vararg s:Int): Int {
+    var sum=0
+    for(i in s){
+        sum+=i
+    }
+    return sum
+}
+
+// Higher Order Function
+fun Hello(names:ArrayList<String>,doSomething:(String)->Unit){
+    for(i in names){
+        doSomething(i)
+    }
+}
+
+fun update(numbers:ArrayList<Int>,lambda:(Int)->Int): ArrayList<Int> {
+    for(i in 0..numbers.size-1){
+        if(numbers[i]%2==0)
+            numbers[i]=lambda(numbers[i])
+    }
+    return numbers
 }
 
 
+/*   Qn from udemy
 
+Create a Higher Order Function that takes a list of client names and a lambda expression that returns a String.
+
+It then applies the lambda expression to every client name, creates a new collection of the results and returns the result.
+
+Create a lambda expression that takes a client name String and returns a personalised message.
+
+Call the HOF and print out the result.
+
+ */
+
+fun udemy(clients:Collection<String>,Lambda:(String)->String): ArrayList<String> {
+    val message=arrayListOf<String>()
+    for(i in clients){
+        message.add(Lambda(i))
+    }
+    return message
+}
