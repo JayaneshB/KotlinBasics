@@ -1,0 +1,2 @@
+fun someFun(): Int {
+}
