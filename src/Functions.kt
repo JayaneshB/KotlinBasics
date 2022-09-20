@@ -145,6 +145,7 @@ fun main(){
 
 }
 
+
 // Function Calls
 fun multiplyNumber(){
     val input= readLine()?:""
