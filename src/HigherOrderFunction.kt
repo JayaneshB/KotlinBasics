@@ -60,6 +60,4 @@ fun main() {
     println("Common Higher Order Function using minBy ")
     println("Min will be: ${customers.minBy{it.length}}")
     println()
-
-    
 }
