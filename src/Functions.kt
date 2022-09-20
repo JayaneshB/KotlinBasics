@@ -142,20 +142,10 @@ fun main(){
     println(newNumber)
     println()
 
-    // Qn from udemy
 
-    val clients=arrayListOf("Jayanesh","Hema")
-    val mess= udemy(clients){name->"Hello $name ,how are you?"}
-    println(clients)
-    println(mess)
-    println()
-
-    for(i in 0..clients.size-1){
-        println("Message for ${clients[i]}")
-        println(mess[i])
-        println()
-    }
 }
+
+// Function Calls
 fun multiplyNumber(){
     val input= readLine()?:""
     val number=input.toInt()
@@ -204,25 +194,4 @@ fun update(numbers:ArrayList<Int>,lambda:(Int)->Int): ArrayList<Int> {
             numbers[i]=lambda(numbers[i])
     }
     return numbers
-}
-
-
-/*   Qn from udemy
-
-Create a Higher Order Function that takes a list of client names and a lambda expression that returns a String.
-
-It then applies the lambda expression to every client name, creates a new collection of the results and returns the result.
-
-Create a lambda expression that takes a client name String and returns a personalised message.
-
-Call the HOF and print out the result.
-
- */
-
-fun udemy(clients:Collection<String>,Lambda:(String)->String): ArrayList<String> {
-    val message=arrayListOf<String>()
-    for(i in clients){
-        message.add(Lambda(i))
-    }
-    return message
 }
