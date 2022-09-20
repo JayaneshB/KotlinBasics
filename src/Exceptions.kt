@@ -39,10 +39,6 @@ fun main() {
         println("throws arithmthic expression")
     }
 
-    val temp1 = demo(10, 2)
-    println(temp1)
-    val temp2 = demo(1, 6)
-    println(temp2)
 
     // Try and finally block
 
@@ -154,4 +150,9 @@ fun main() {
     finally{
         println("Executed try catch and finally")
     }
+
+    val temp1 = demo(10, 2)
+    println(temp1)
+    val temp2 = demo(10, 0)
+    println(temp2)
 }

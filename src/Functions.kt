@@ -1,25 +1,5 @@
 import java.math.BigInteger
 
-
-//Extensive function
-
-fun String.getAllWords(): List<String>{
-    return this.split(" ")
-}
-
-// Infix function
-
-infix fun Int.test(n1:Int):Int{
-    if(n1>23)
-        return n1
-    else{
-        return 1
-    }
-}
-// Infix function
-
-infix fun Int.add(b:Int):Int=this+b
-
 //Recursion call
 
 fun factorial(n:Int):Long {
@@ -70,29 +50,6 @@ fun higherOrder(a:Double,b:Double,fn:(Double,Double)->Double):Double {
 fun main(){
 
     /*
-    val sc=Scanner(System.`in`)
-    println("Enter the string/word:")
-    val str=sc.nextLine()
-    val result=str.getAllWords()
-    println("The separated string will be:")
-    println(result)
-    println()
-
-
-    val x=10 add 20
-    println("Sum of the two numbers will be:")
-    println(x)
-    println()
-
-
-    val n1=23
-    val n2=34
-    val res=n1.test(n2)
-    println("Result will be:")
-    println(res)
-    println()
-
-
     val number=5
     val temp=factorial(number)
     println("Factorial of th given number will be:")

@@ -57,16 +57,9 @@ fun main()
     val result= max(23,76)
     println(result)
 
-//    val tries
-//    ran(tries:3)
 
 }
-fun ran(tries: Int) {
-    for (i in 0 until tries) {
-        val t = (1..6).random()
-        println(t)
-    }
-}
+
 fun sum(a:Int,b:Int): Int=a+b
 
 fun max(a:Int,b:Int): Int = if(a>b) a else b
