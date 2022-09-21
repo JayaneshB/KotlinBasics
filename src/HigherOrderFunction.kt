@@ -18,6 +18,7 @@ fun udemy(clients:Collection<String>,Lambda:(String)->String): ArrayList<String>
     return message
 }
 
+
 fun main() {
 
     // Qn from udemy
