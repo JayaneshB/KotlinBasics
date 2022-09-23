@@ -23,7 +23,17 @@ fun main() {
     doc.study()
     doc.study()
     doc.work()
+    println()
 
+    // Constructor calling
+
+    val t=Table()
+    val t2=Table(2)
+    val t3=Table(3,156)
+
+    t.printInfo()
+    t2.printInfo()
+    t3.printInfo()
 
 
 }
@@ -46,4 +56,25 @@ class Engineer: Job() {
 }
 class Doctor :Job() {
 
+}
+
+// Constructor
+
+class Table {
+    constructor(){
+
+    }
+    constructor(newLegs:Int){
+        legs=newLegs
+        height=123
+    }
+    constructor(newLegs:Int,newHeight:Int){
+        legs=newLegs
+        height=newHeight
+    }
+    var legs=4
+    var height=150
+    fun printInfo() {
+        println("This table has $legs legs and $height height")
+    }
 }
