@@ -61,4 +61,20 @@ fun main() {
     println("Common Higher Order Function using minBy ")
     println("Min will be: ${customers.minBy{it.length}}")
     println()
+
+
+    // Multiline string
+
+    val str=""" Hii This is Jayanesh!!
+        |'m working as an android developer in FundsIndia for past one month
+    """
+    println(str)
+
+    // Late init keyword
+
+     lateinit var st: String // we can create a variable but the value can be initailized later
+
+
+
+
 }

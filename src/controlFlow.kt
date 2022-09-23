@@ -4,9 +4,12 @@ fun main(args:Array<String>) {
 
     val num1=12
     val num2=23
+    sayHello(listOf())
     val result=if(num1>num2) {
         println("1 is greater than 2")
     }
+
+
     else{
         println("2 is greater than 1")
     }
@@ -87,22 +90,36 @@ fun main(args:Array<String>) {
     println()
     //Break Expression
 
-    val q=arrayOf<Int>(1,2,3,4,5)
+    val q=arrayOf<Int>(1,2,3,4,5,5)
     for( i in q) {
         if (i == 3) {
-            break;
+            break
         }
-        print(" " + i)
+        println("break " + i)
     }
     println()
 
     //Continue Expression
 
     for (i in 1..3) {
-        println("i = $i")
+        println("cont i = $i")
         if (i == 2) {
             continue
         }
-        println("Outside if")
+        println("cont Outside if not reach if condition satisfied")
     }
+
+    // downto function
+    println("DownTo function :")
+    for(n in 5.downTo(1)){
+        print(" "+n)
+    }
+
+    // step function
+
+    println("Step Function :")
+    for (i in 3..10 step 2) {
+        print(" " + i)
+    }
+
 }
