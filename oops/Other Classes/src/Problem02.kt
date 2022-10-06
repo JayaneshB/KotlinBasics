@@ -38,7 +38,7 @@ fun getArticle():Article {
     return Article(randomTitle,"Some content",numberOfReaders)
 }
 
-data class Article(
+data class Article (
     val title:String,
     val content:String,
     val numberOfReaders:Int
